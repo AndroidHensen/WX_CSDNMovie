@@ -1,0 +1,26 @@
+<!--recommend.wxml-->
+
+<view wx:for="{{subjects}}" wx:for-index="i" wx:for-item="item">
+  <view class="" bindtap="go2Detail" id="{{item.id}}">
+    <view class="hor p20">
+      <view class="">
+        <image class="icon" src="{{item.images.large}}"></image>
+      </view>
+      <view class="detail ml20">
+        <view class="hor grade">
+          <view class="">名称：{{item.title}}</view>
+          <view class="o">{{item.rating.average}}分</view>
+        </view>
+        <view class="">类型：{{item.genres}}</view>
+        <view class="">导演:
+          <block wx:for="{{item.directors}}" wx:for-item="director">{{director.name}},</block>
+        </view>
+        <view class="">演员:
+          <block wx:for="{{item.casts}}" wx:for-item="cast">{{cast.name}},</block>
+        </view>
+        <view class="">年份：{{item.year}}</view>
+      </view>
+    </view>
+    <view class="l"></view>
+  </view>
+</view>

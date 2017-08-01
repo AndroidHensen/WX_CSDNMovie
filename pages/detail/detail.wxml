@@ -1,0 +1,38 @@
+<!--detail.wxml-->
+<image class="bg" src="../../assets/imgs/bg.jpg"></image>
+<view class="content">
+  <view class="hor p20">
+    <view class="">
+      <image class="icon" src="{{item.images.large}}"></image>
+    </view>
+    <view class="detail ml20">
+      <view class="hor grade">
+        <view class="w">名称：{{item.title}}</view>
+        <view class="o">{{item.rating.average}}分</view>
+      </view>
+      <view class="w">类型：{{item.genres}}</view>
+      <view class="w">导演:
+        <block wx:for="{{item.directors}}" wx:for-item="director">{{director.name}},</block>
+      </view>
+      <view class="w">演员:
+        <block wx:for="{{item.casts}}" wx:for-item="cast">{{cast.name}},</block>
+      </view>
+      <view class="w">年份：{{item.year}}</view>
+    </view>
+  </view>
+</view>
+<view class="p20">{{item.summary}}</view>
+<view class="l2"></view>
+<view class="p20">主要演职人员：</view>
+<view class="l"></view>
+
+<scroll-view class="sv" scroll-x>
+    <view class="block p30" wx:for="{{item.directors}}" wx:for-item="director">
+      <image class="icon" src="{{director.avatars.large}}"></image>
+      <view class="center f30">(导演){{director.name}}</view>
+    </view>
+    <view class="block p30" wx:for="{{item.casts}}" wx:for-item="cast">
+      <image class="icon" src="{{cast.avatars.large}}"></image>
+      <view class="center f30">(演员){{cast.name}}</view>
+    </view>
+</scroll-view>

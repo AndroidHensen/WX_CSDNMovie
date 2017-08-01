@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/detail/detail",
+    "pages/recommend/recommend",
+    "pages/search/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2AAC5E",
+    "navigationBarTitleText": "豆瓣电影",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "电影热映",
+        "iconPath": "assets/imgs/movie-recorder.png",
+        "selectedIconPath": "assets/imgs/movie-recorder2.png"
+      },
+      {
+        "pagePath": "pages/recommend/recommend",
+        "text": "电影推荐",
+        "iconPath": "assets/imgs/movie-top.png",
+        "selectedIconPath": "assets/imgs/movie-top2.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "电影搜索",
+        "iconPath": "assets/imgs/movie-search.png",
+        "selectedIconPath": "assets/imgs/movie-search2.png"
+      }
+    ]
+  }
+}

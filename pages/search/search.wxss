@@ -1,0 +1,13 @@
+/* search.wxss */
+
+.input_search {
+  flex-grow: 1;
+  border: 1rpx solid #eee;
+  height: 60rpx;
+  border-radius: 8rpx;
+}
+
+.btn_search {
+  height: 60rpx;
+  line-height: 60rpx;
+}
